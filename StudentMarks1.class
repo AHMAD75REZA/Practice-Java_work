@@ -1,0 +1,27 @@
+//SEQUENTIL SEARCH.JAVA
+public class SequentialSearch{
+    if(args.length <2){
+        System.out.println("Enter list of numbers and key to seach");
+        return;
+    }
+    int size  = args.length;
+    int key = Integer.parseInt(args[size-1]);
+    int [] elements = new int[size];
+    for(int i = 0; i<size; i++){
+        int value = Integer.parseInt(args[i]);
+        elements[i] = value ;
+    }
+    int loc = -1;
+    for(int i = 0; i<size; i++){
+        if(elements[i] == key){
+            loc = 1;
+            break;
+        }
+    }
+    if(loc== -1){
+        System.out.println(key+ "does not exist in the given list");
+    }
+    else{
+        System.out.println(key + "EXIST first at location" + loc);
+    }
+}
